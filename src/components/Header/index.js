@@ -1,11 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Header = () => (
+const Header = (props) => (
   <header>
-    <h1>
-      <Link to="/">Front End Blog</Link>
-    </h1>
+    <nav>
+      <Link to="/">{props.title}</Link>
+    </nav>
   </header>
 )
 

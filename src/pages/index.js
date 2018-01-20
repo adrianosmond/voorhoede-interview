@@ -3,20 +3,28 @@ import PostPreview from '../components/PostPreview'
 
 const HomePage = ({data}) => (
   <div>
-    {data.allMarkdownRemark.edges.map(({ node }, idx) => (
-      <PostPreview key={idx} url={node.fields.slug} title={node.headings[0].value} />
-    ))}
+    {data.allMarkdownRemark.edges.map(({ node }, idx) => {
+      const postData = {
+        url: node.fields.slug,
+        title: node.frontmatter.title,
+        date: node.frontmatter.date,
+        excerpt: node.excerpt,
+      }
+      return <PostPreview key={idx} data={postData} />
+    })}
   </div>
 )
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort:{fields: [frontmatter___date], order:DESC}) {
       edges {
         node {
-          headings(depth:h1) {
-            value
+          frontmatter {
+            title
+            date
           }
+          excerpt
           fields {
             slug
           }

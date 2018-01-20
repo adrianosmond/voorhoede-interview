@@ -3,9 +3,10 @@ import './index.css'
 
 import Link from 'gatsby-link'
 
-const PostPreview = (props) => (
-  <Link to={props.url} className="post-preview">
-    {props.title}
+const PostPreview = ({data}) => (
+  <Link to={data.url} className="post-preview">
+    {data.title} - {data.date}
+    <p>{data.excerpt}</p>
   </Link>
 )
 export default PostPreview;

@@ -1,5 +1,7 @@
-# Progressive Enhancement for JavaScript App Developers
-
+---
+title: "Progressive Enhancement for JavaScript App Developers"
+date: "2016-06-16"
+---
 You use a JavaScript framework to build your apps? Smart. It's probably helping you and your team to build amazing things without having to worry about all the cross-browser inconsistencies. Popular JavaScript frameworks have extensive documentation, demos, tooling and a community to help you out. [JavaScript frameworks do come at a cost](https://aerotwist.com/blog/the-cost-of-frameworks/). But I'll assume you're already past that consideration.
 
 So let's instead discuss techniques and best practices to get the most out of your JavaScript app. How can you get the best experience across browsers and devices? Some good old basics help create widely useable apps. And while JavaScript apps run in the browser, you can already prep server-side. Finally, we can go even further and enhance our JavaScript apps into native-like apps using Progressive Web App technology.
