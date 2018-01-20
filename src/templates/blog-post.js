@@ -11,6 +11,10 @@ const readingTime = (text) => {
 }
 
 class BlogPost extends Component {
+  componentDidMount() {
+    Prism.highlightAll();
+  }
+
   render () {
     const post = this.props.data.allContentfulBlogPost.edges[0].node;
     return (
