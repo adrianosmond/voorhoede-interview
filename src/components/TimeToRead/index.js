@@ -7,7 +7,7 @@ class TimeToRead extends Component {
     this.state = {
       timeToRead: 0,
       timeRemaining: 0,
-      remaining: false
+      showRemainingLabel: false
     }
     this.scrollListener = null
     this.scrolling = false
@@ -42,10 +42,10 @@ class TimeToRead extends Component {
 
     // Only set the state if the time remaining has changed to avoid unnecessary renders
     if (timeRemaining !== this.state.timeRemaining) {
-      const remaining = timeRemaining < this.state.timeToRead
+      const showRemainingLabel = timeRemaining < this.state.timeToRead
       this.setState({
         timeRemaining,
-        remaining
+        showRemainingLabel
       })
     }
     this.scrolling = false
@@ -53,7 +53,7 @@ class TimeToRead extends Component {
 
   render () {
     const plural = this.state.timeRemaining !== 1 ? 's' : ''
-    const remaining = this.state.remaining ? ' remaining' : ''
+    const remaining = this.state.showRemainingLabel ? ' remaining' : ''
     return (
       <p className="time-to-read" ref={(el) => {this.el = el}}>
         Time to read: {this.state.timeRemaining} minute{plural}{remaining}
