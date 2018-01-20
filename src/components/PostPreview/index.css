@@ -1,3 +1,31 @@
+@import '../../layouts/variables.css';
+
 .post-preview {
-    display: block;
+  display: block;
+  border: 1px solid var(--border-grey);
+  padding: 1rem;
+  background-color: var(--background-grey);
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-preview:not(:first-child) {
+  margin-top: 2rem;
+}
+
+.post-preview__title {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.post-preview__metadata {
+  display: block;
+  margin: 0.5rem 0;
+  color: var(--text-grey--lighter);
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+.post-preview__excerpt {
+  margin: 0;
 }

@@ -1,16 +1,17 @@
 import React from "react"
 import Helmet from 'react-helmet'
 import TimeToRead from '../components/TimeToRead'
-import './prism-twilight.css'
+import './blog-post.css'
+import './prism.css'
 
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <div>
+    <div className="article">
       <Helmet title={post.frontmatter.title} />
-      <h1>{post.frontmatter.title}</h1>
+      <h1 className="article__title">{post.frontmatter.title}</h1>
       <TimeToRead timeToRead={post.timeToRead} />
-      <article dangerouslySetInnerHTML={{ __html: post.html }} />
+      <article className="article__content" dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
   )
 }

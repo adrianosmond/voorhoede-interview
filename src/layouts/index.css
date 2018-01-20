@@ -1,22 +1,59 @@
+@import './variables.css';
+
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
+  background-color: var(--background-grey);
+  font-family: sans-serif;
+  color: var(--text-grey);
+  font-size: 14px;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
+}
+
+p {
+  line-height: 1.4;
+}
+
+li {
+  margin-top: 1rem;
+  line-height: 1.4;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .site-body {
-    max-width: 1000px;
-    padding: 0 1rem;
+  flex-grow: 1;
+  background-color: var(--white);
+  max-width: var(--body-max-width);
+  margin: 0 auto;
+  padding: 2rem;
+  border-left: 1px solid var(--border-grey);
+  border-right: 1px solid var(--border-grey);
+}
+
+@media screen and (min-width: 25rem) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  body {
+    font-size: 18px;
+  }
 }

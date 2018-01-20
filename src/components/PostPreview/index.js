@@ -1,12 +1,13 @@
 import React from 'react'
-import './index.css'
-
 import Link from 'gatsby-link'
+import fecha from 'fecha'
+import './index.css'
 
 const PostPreview = ({data}) => (
   <Link to={data.url} className="post-preview">
-    {data.title} - {data.date}
-    <p>{data.excerpt}</p>
+    <h3 className="post-preview__title">{data.title}</h3>
+    <span className="post-preview__metadata">Written on {fecha.format(new Date(data.date), 'dddd MMMM Do, YYYY')}</span>
+    <p className="post-preview__excerpt">{data.excerpt}</p>
   </Link>
 )
 export default PostPreview;

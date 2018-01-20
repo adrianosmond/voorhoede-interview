@@ -5,7 +5,7 @@ import './normalize.css'
 import './index.css'
 
 const TemplateWrapper = ({ data, children }) => (
-  <div>
+  <div className="site-wrapper">
     <Helmet title={data.site.siteMetadata.title} />
     <Header title={data.site.siteMetadata.title} />
     <main className="site-body">

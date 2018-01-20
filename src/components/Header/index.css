@@ -1,0 +1,16 @@
+@import '../../layouts/variables.css';
+
+.site-header {
+  padding: 1rem;
+  background-color: var(--blue);
+  color: var(--white);
+  text-align: center;
+  border-bottom: 2px solid var(--border-grey);
+}
+
+.site-header__link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

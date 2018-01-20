@@ -1,0 +1,12 @@
+:root {
+  /* COLORS */
+  --white: #ffffff;
+  --blue: #1b70df;
+  --border-grey: #cccccc;
+  --background-grey: #f7f7f7;
+  --text-grey: #333;
+  --text-grey--lighter: #666;
+
+  /* DIMENSIONS */
+  --body-max-width: 50rem;
+}
