@@ -1,12 +1,6 @@
 const path = require('path')
 const marked = require('marked')
 const striptags = require('striptags')
-marked.setOptions({
-  smartypants: false
-})
-
-// const { createFilePath } = require('gatsby-source-filesystem')
-
 let textNodes = {}
 
 const makeExcerpt = (text) => {
@@ -22,7 +16,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       value: makeExcerpt(textNodes[node.id].content),
     })
   } else if (node.internal.type === 'contentfulBlogPostContentTextNode') {
-    textNodes[node.parent] = node;
+    textNodes[node.parent] = node
   }
 }
 
