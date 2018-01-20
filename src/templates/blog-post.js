@@ -11,7 +11,6 @@ const readingTime = (text) => {
 
 export default ({ data }) => {
   const post = data.allContentfulBlogPost.edges[0].node;
-  console.log(post);
   return (
     <div className="article">
       <Helmet title={post.title} />
