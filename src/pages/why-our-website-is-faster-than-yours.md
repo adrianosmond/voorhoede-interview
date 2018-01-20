@@ -2,7 +2,6 @@
 title: "Why our website is faster than yours"
 date: "2016-06-26"
 ---
-# Why our website is faster than yours
 
 We recently updated our site. Yes, it has a complete design overhaul, but as real software developers we focused a lot on the technical bits and pieces as well. Our goal was to take control, focus on performance, be flexible for the future and make it fun to write content for the site. Here’s how we made our website faster than yours (Yup, sorry!)
 
@@ -48,7 +47,7 @@ In our projects we have daily discussions...
 
 The [average webpage is a whopping 2406kb of which 1535kb are images](http://httparchive.org/interesting.php). With images taking up such a big part of the average website, it is also one of the best targets for performance wins.
 
-![Average bytes per page by content type chart](https://www.voorhoede.nl/assets/images/average-bytes-per-page-chart-l.jpg "Average bytes per page by content type for July 2016 from httparchive.org")
+![Average bytes per page by content type chart](https://www.datocms-assets.com/2651/1501063299-average-bytes-per-page-chart.jpg?ch=Width,DPR&auto=compress&auto=format&w=990 "Average bytes per page by content type for July 2016 from httparchive.org")
 
 ### WebP
 
@@ -168,7 +167,7 @@ Manually determining this critical CSS is a time consuming process, especially d
 
 See below our homepage rendered with critical CSS and rendered with the full CSS. Notice the fold where below the fold the page is still sort of unstyled.
 
-![Fold illustration](https://www.voorhoede.nl/assets/images/voorhoede-fold-l.jpg "On the left the homepage rendered with only critical CSS, on the right the homepage rendered with the full CSS. The red line representing the fold.")
+![Fold illustration](https://www.datocms-assets.com/2651/1501063306-voorhoede-fold.jpg?ch=Width,DPR&auto=compress&auto=format&w=990 "On the left the homepage rendered with only critical CSS, on the right the homepage rendered with the full CSS. The red line representing the fold.")
 
 ## The server
 
@@ -235,7 +234,7 @@ The Apache server side logic are the comment looking lines starting with `<!-- #
  
 The same approach is used for loading in fonts asynchronously for the first view, assuming we can serve them from browser cache for repeating views.
 
-![Cookie overview screenshot](https://www.voorhoede.nl/assets/images/voorhoede-cookies-l.jpg "See here our cookies used to differentiate between first and repeated views.")
+![Cookie overview screenshot](https://www.datocms-assets.com/2651/1501063400-voorhoede-cookies.jpg?ch=Width,DPR&auto=compress&auto=format&w=990 "See here our cookies used to differentiate between first and repeated views.")
 
 ## File level caching
 
@@ -251,7 +250,7 @@ If you’ve come this far (awesome!) you probably want to know the result. Testi
 
 So see here how our homepage loads on a throttled 50KB/s GPRS connection.
 
-![Network analysis for de Voorhoede site for the first page view](https://www.voorhoede.nl/assets/images/voorhoede-network-analysis-l.jpg "An overview of how the page evolves for the first visit")
+![Network analysis for de Voorhoede site for the first page view](https://www.datocms-assets.com/2651/1501063404-voorhoede-network-analysis.jpg?ch=Width,DPR&auto=compress&auto=format&w=990 "An overview of how the page evolves for the first visit")
 
 Notice how we get the first render at 2.27s on a 50KB/s GPRS network, represented by the first image from the filmstrip and the corresponding yellow line on the waterfall view. The yellow line is drawn right after the HTML has been downloaded. The HTML contains the critical CSS, making sure the page looks usable. All other blocking recources are being lazily loaded, so we can interact with the page while the rest is being downloaded. This is exactly what we wanted!
 

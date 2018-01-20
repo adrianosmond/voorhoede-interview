@@ -4,7 +4,7 @@ date: "2016-03-30"
 ---
 Developers respect color theory, designers worry about render-blocking JavaScript. These are some of our daydreams. The reality is that we usually prioritise fixing our own problems before we try to understand someone else’s. As front-end development specialists, we work closely together with interaction and visual designers every day. To get the best out of each other, we came up with these guidelines.
 
-![Designers and developers working together](https://www.voorhoede.nl/assets/images/designers-developers-working-together.jpg "Photo taken during our “Developers ❤ designers” day with UNITiD. We talked about code and design, and put our ideas into practice by teaming up to build random prototypes.")
+![Designers and developers working together](https://www.datocms-assets.com/2651/1500889588-designers-developers-working-together.jpg?ch=Width,DPR&auto=compress&auto=format&w=990 "Photo taken during our “Developers ❤ designers” day with UNITiD. We talked about code and design, and put our ideas into practice by teaming up to build random prototypes.")
 
 ## Wait — why is this collaboration so difficult in the first place?
 
