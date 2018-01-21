@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Lora:700|Open+Sans:300,600';
+@import 'https://fonts.googleapis.com/css?family=Lora:700|Open+Sans:400,600';
 @import '../globals/variables.css';
 
 *,
@@ -13,7 +13,6 @@ html {
 
 body {
   font-family: 'Open Sans',sans-serif;
-  font-weight: 300;
   color: var(--text-grey);
   font-size: 14px;
 }
