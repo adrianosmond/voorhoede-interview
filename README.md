@@ -26,3 +26,4 @@ Obviously this isn't finished. Here are a few things I'd like to do given more t
 - Better caching rules on the server would also help with speed
 - I'm using React's <code>dangerouslySetInnerHTML</code> which is fine when doing static generation of content. However I'd want to investigate how Gatsby & React handle this on the client, as setting the innerHTML to a bunch of mark-up opens the site up to XSS attacks.
 - Rigorous browser testing is needed. I had a quick glance in Chrome, Firefox and Safari on my Mac, but if this were a real site I'd need to do more testing
+- I haven't implemented the JS used by the button and checkbox demos on 'Why our website is faster than yours', so the elements remain disabled
