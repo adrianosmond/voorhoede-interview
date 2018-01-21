@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css?family=Lora:700|Open+Sans:300,600';
 @import './variables.css';
 
 *,
@@ -11,10 +12,14 @@ html {
 }
 
 body {
-  background-color: var(--background-grey);
-  font-family: sans-serif;
+  font-family: 'Open Sans',sans-serif;
+  font-weight: 300;
   color: var(--text-grey);
   font-size: 14px;
+}
+
+strong, b {
+  font-weight: 600;
 }
 
 img {
@@ -30,25 +35,80 @@ li {
   line-height: 1.4;
 }
 
-.site-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2em;
+  font-family: Lora, serif;
+}
+
+a {
+  color: var(--blue);
+}
+
+code {
+  word-break: break-all
 }
 
 .site-body {
-  flex-grow: 1;
-  background-color: var(--white);
   max-width: var(--body-max-width);
   margin: 0 auto;
-  padding: 2rem;
-  border-left: 1px solid var(--border-grey);
-  border-right: 1px solid var(--border-grey);
+  padding: var(--spacing--small);
+}
+
+.site-heading {
+  margin-top: 0;
+}
+
+.site-intro {
+  margin-top: 0;
 }
 
 @media screen and (min-width: 25rem) {
   body {
     font-size: 16px;
+  }
+
+  pre {
+    font-size: 14px;
+  }
+
+  .site-body {
+    padding: var(--spacing--large);
+  }
+}
+
+@media screen and (min-width: 30rem) {
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5em;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  } 
+  
+  h2 {
+    font-size: 2em;
+  } 
+  
+  h3 {
+    font-size: 1.5em;
+  } 
+  
+  h4 {
+    font-size: 1.25em;
+  }
+
+  .site-intro {
+    font-size: 1.3em;
+  }
+}
+
+
+
+
+@media screen and (min-width: 50rem) {
+  body {
+    font-size: 18px;
   }
   
   pre {
@@ -56,12 +116,12 @@ li {
   }
 }
 
-@media screen and (min-width: 50rem) {
-  body {
-    font-size: 18px;
+@media screen and (min-width: 60rem) {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.25em;
   }
 
-  pre {
-    font-size: 14px;
+  h1 {
+    font-size: 3em;
   }
 }

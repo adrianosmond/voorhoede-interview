@@ -1,0 +1,27 @@
+@import '../../layouts/variables.css';
+
+.site-footer__content {
+  max-width: var(--body-max-width);
+  margin: 0 auto;
+  padding: 1rem var(--spacing--small);
+}
+
+.site-footer__copyright {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-grey--lighter);
+}
+
+
+@media screen and (min-width: 25rem) {
+  .site-footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem var(--spacing--large);
+  }
+  
+  .site-footer__copyright {
+    margin-bottom: 0;
+  }
+}

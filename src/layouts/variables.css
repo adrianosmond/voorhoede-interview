@@ -2,11 +2,13 @@
   /* COLORS */
   --white: #ffffff;
   --blue: #1b70df;
-  --border-grey: #cccccc;
+  --border-grey: #eeeeee;
   --background-grey: #f7f7f7;
   --text-grey: #333;
   --text-grey--lighter: #666;
 
   /* DIMENSIONS */
   --body-max-width: 50rem;
+  --spacing--small: 1rem;
+  --spacing--large: 2rem;
 }

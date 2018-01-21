@@ -1,11 +1,14 @@
 @import '../../layouts/variables.css';
 
 .site-header {
-  padding: 1rem;
-  background-color: var(--blue);
-  color: var(--white);
-  text-align: center;
-  border-bottom: 2px solid var(--border-grey);
+  background-color: var(--background-grey);
+  border-bottom: 1px solid var(--border-grey);
+}
+
+.site-header__nav {
+  max-width: var(--body-max-width);
+  margin: 0 auto;
+  padding: 1rem var(--spacing--small);
 }
 
 .site-header__link {
@@ -13,4 +16,15 @@
   color: inherit;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.site-header__logo {
+  font-family: Lora;
+  height: 2rem;
+}
+
+@media screen and (min-width: 25rem) {
+  .site-header__nav {
+    padding: 1rem var(--spacing--large);
+  }
 }

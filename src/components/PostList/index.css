@@ -1,0 +1,25 @@
+@import '../../layouts/variables.css';
+
+.post-list {
+  margin-top: var(--spacing--large);
+}
+
+.post-list__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.post-list__item {
+  margin-top: var(--spacing--small);
+}
+
+@media screen and (min-width: 25rem) {
+  .post-list__item {
+    margin-top: var(--spacing--large);
+    padding-bottom: var(--spacing--large);
+  }
+  
+  .post-list__item:not(:last-child) {
+    border-bottom: 1px solid var(--border-grey);
+  }
+}
