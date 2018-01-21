@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Front End Blog',
+    title: 'Code Block',
     description: 'Giving you the information you need to become the best front end developer you can be.',
     siteUrl: 'https://voorhoede-interview-aosmond.netlify.com/',
   },

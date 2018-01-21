@@ -21,6 +21,7 @@
 .site-header__logo {
   font-family: Lora;
   height: 2rem;
+  fill: var(--blue);
 }
 
 @media screen and (min-width: 37.5em) {

@@ -11,7 +11,7 @@ const Header = (props) => (
           <path d="M11.298 8.389l4.6 4.6-4.6 4.6 1.4 1.4 6-6-6-6-1.4 1.4z"/>
           <path d="M8.511 11.6L3.911 7l4.6-4.6-1.4-1.4-6 6 6 6 1.4-1.4z"/>
           <path d="M8.249 17.589l-4.6-4.6 4.6-4.6-1.4-1.4-6 6 6 6 1.4-1.4z"/>
-          <text fontWeight="bold" fontSize="16" y="16" x="23">Front End Blog</text>
+          <text fontWeight="bold" fontSize="16" y="16" x="23">{props.title}</text>
         </svg>
       </Link>
     </nav>
