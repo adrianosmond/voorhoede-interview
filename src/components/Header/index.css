@@ -21,6 +21,10 @@
 .site-header__logo {
   font-family: Lora;
   height: 2rem;
+  fill: var(--text-grey);
+}
+
+.site-header__logo-piece {
   fill: var(--blue);
 }
 
