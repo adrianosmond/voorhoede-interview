@@ -3,7 +3,7 @@
 .time-to-read {
   float: right;
   font-size: 0.75em;
-  margin-top: -0.8rem;
+  margin-top: -1.25em;
   margin-bottom: 0;
 }
 
@@ -11,17 +11,15 @@
   .time-to-read {
     float: none;
     position: sticky;
-    top: 0;
+    top: 1.5rem;
     z-index: 2; /* Needed to sit on top of prism styles */
-    margin: -2.5rem 0 0 16rem;
-    padding: 2.25em 0 0;
+    margin-left: 16rem;
   }
 }
 
 @media screen and (min-width: 60em) {
   .time-to-read {
-    margin-left: 25rem;
-    margin-top: -2.6rem;
-    padding: 1.75em 0 0;
+    top: 1.4rem;
+    margin-left: 25em;
   }
 }

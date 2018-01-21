@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Lora:700|Open+Sans:400,600';
+@import 'https://fonts.googleapis.com/css?family=Lora:700|Open+Sans:300,600';
 @import '../globals/variables.css';
 
 *,
@@ -14,7 +14,8 @@ html {
 body {
   font-family: 'Open Sans',sans-serif;
   color: var(--text-grey);
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 strong, b {
@@ -63,7 +64,7 @@ code {
 
 @media screen and (min-width: 30em) {
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -107,7 +108,7 @@ code {
 
 @media screen and (min-width: 60em) {
   body {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   h1, h2, h3, h4, h5, h6 {
