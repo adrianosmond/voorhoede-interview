@@ -1,4 +1,4 @@
-# Voorhoede assignemnt
+# Voorhoede assignment
 
 My assignment for De Voorhoede.
 
@@ -16,11 +16,13 @@ Since the content on this site won't be changing often, I opted to use a static 
 
 I opted to use the Markdown versions of the files, as they offer the most obvious authoring experience for future content. Initially I imported them directly into my repository, [but I'd wanted to try out the stack from this article for a while](https://www.gatsbyjs.org/blog/2017-12-06-gatsby-plus-contentful-plus-netlify/) so I ended up moving them to [Contentful](https://www.contentful.com), separating the title field out and adding a date field (which was present in the JSON files anyway). I've [hosted it here on Netlify](https://voorhoede-interview-aosmond.netlify.com) and it now gets rebuilt anytime I push to master on Git or make a content update on Contentful, which is cool.
 
+I've added a TimeToRead component on article pages, which updates as you scroll down the page. I did this to demonstrate a little client side JS and to stop the site from being completely static. I'm not sure I would've put this in otherwise 🙂
+
 ## Further work
 
 Obviously this isn't finished. Here are a few things I'd like to do given more time
 - Pagination on the homepage would be essential if we had lots of articles
 - Asynchronous font loading (as discussed in the 'Why our website is faster than yours' article) would speed things up
-- Better caching rules on the server
+- Better caching rules on the server would also help with speed
 - I'm using React's <code>dangerouslySetInnerHTML</code> which is fine when doing static generation of content. However I'd want to investigate how Gatsby & React handle this on the client, as setting the innerHTML to a bunch of mark-up opens the site up to XSS attacks.
 - Rigorous browser testing is needed. I had a quick glance in Chrome, Firefox and Safari on my Mac, but if this were a real site I'd need to do more testing
