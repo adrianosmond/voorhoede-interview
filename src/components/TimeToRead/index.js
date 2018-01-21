@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './index.css'
 
+const STICKY_WIDTH = 600;
+
 class TimeToRead extends Component {
   constructor (props) {
     super(props)
@@ -9,34 +11,47 @@ class TimeToRead extends Component {
       timeRemaining: 0,
       showRemainingLabel: false
     }
+    this.listeningForScrolls = false;
     this.scrollListener = null
     this.scrolling = false
+    this.resizing = false
     this.el = null
   }
 
   componentWillMount() {
-    this.setState({
-      timeToRead: this.props.timeToRead,
-      timeRemaining: this.props.timeToRead
-    })
+    this.setInitialState()
   }
 
   componentDidMount() {
-    this.scrollListener = this.handleScroll.bind(this)
-    window.addEventListener('scroll', this.scrollListener)
+    this.resizeListener = this.throttleResize.bind(this)
+    window.addEventListener('resize', this.resizeListener)
+
+    this.scrollListener = this.throttleScroll.bind(this)
+    // Decide whether we should be listening for scroll events
+    // based on the width of the component
+    this.throttleResize()
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.scrollListener)
+    window.removeEventListener('resize', this.resizeListener)
   }
 
-  throttleScroll () {
+  setInitialState() {
+    this.setState({
+      timeToRead: this.props.timeToRead,
+      timeRemaining: this.props.timeToRead,
+      showRemainingLabel: false
+    })
+  }
+
+  throttleScroll() {
     if (this.scrolling) return
     this.scrolling = true
-    window.requestAnimationFrame(this.handleScroll)
+    window.requestAnimationFrame(this.handleScroll.bind(this))
   }
 
-  handleScroll () {
+  handleScroll() {
     const percentatgeRemaining = 1 - (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight))
     const timeRemaining = Math.ceil(this.state.timeToRead * percentatgeRemaining)
 
@@ -49,6 +64,27 @@ class TimeToRead extends Component {
       })
     }
     this.scrolling = false
+  }
+
+  throttleResize () {
+    if (this.resizing) return
+    this.resizing = true
+    window.requestAnimationFrame(this.handleResize.bind(this))
+  }
+
+  handleResize () {
+    if (this.listeningForScrolls && window.innerWidth < STICKY_WIDTH) {
+      this.listeningForScrolls = false;
+      window.removeEventListener('scroll', this.scrollListener)
+      this.setInitialState()
+    } else if (!this.listeningForScrolls && window.innerWidth >= STICKY_WIDTH) {
+      this.listeningForScrolls = true;
+      window.addEventListener('scroll', this.scrollListener)
+      // Fake a scroll to make sure we calculate the right data for the current
+      // scroll position
+      this.throttleScroll()
+    }
+    this.resizing = false
   }
 
   render () {

@@ -1,4 +1,4 @@
-@import '../../layouts/variables.css';
+@import '../../globals/variables.css';
 
 .post-preview {
   display: block;
@@ -21,7 +21,7 @@
   margin: 0;
 }
 
-@media screen and (min-width: 25rem) {
+@media screen and (min-width: 30em) {
   .post-preview__title {
     margin: 0.5rem 0;
   }

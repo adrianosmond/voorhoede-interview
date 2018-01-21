@@ -1,4 +1,4 @@
-@import '../../layouts/variables.css';
+@import '../../globals/variables.css';
 
 .site-header {
   background-color: var(--background-grey);
@@ -23,7 +23,12 @@
   height: 2rem;
 }
 
-@media screen and (min-width: 25rem) {
+@media screen and (min-width: 37.5em) {
+  .site-header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+  }
   .site-header__nav {
     padding: 1rem var(--spacing--large);
   }

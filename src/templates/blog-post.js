@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import Helmet from 'react-helmet'
 import marked from 'marked'
 import Prism from 'prismjs'
+import fecha from 'fecha'
+import { DATE_FORMAT } from '../globals/constants'
 import TimeToRead from '../components/TimeToRead'
 import './blog-post.css'
 import './prism.css'
@@ -20,8 +22,11 @@ class BlogPost extends Component {
     return (
       <div className="article">
         <Helmet title={post.title} />
+        <div className="article__metadata">
+          {fecha.format(new Date(post.date), DATE_FORMAT )}
+        </div>
+          <TimeToRead timeToRead={readingTime(post.content.content)} />
         <h1 className="article__title">{post.title}</h1>
-        <TimeToRead timeToRead={readingTime(post.content.content)} />
         <article className="article__content" dangerouslySetInnerHTML={{ __html: marked(post.content.content) }} />
       </div>
     )

@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css?family=Lora:700|Open+Sans:300,600';
-@import './variables.css';
+@import '../globals/variables.css';
 
 *,
 *:before,
@@ -62,21 +62,10 @@ code {
   margin-top: 0;
 }
 
-@media screen and (min-width: 25rem) {
+@media screen and (min-width: 30em) {
   body {
     font-size: 16px;
   }
-
-  pre {
-    font-size: 14px;
-  }
-
-  .site-body {
-    padding: var(--spacing--large);
-  }
-}
-
-@media screen and (min-width: 30rem) {
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5em;
@@ -98,30 +87,43 @@ code {
     font-size: 1.25em;
   }
 
+  pre {
+    font-size: 14px;
+  }
+
+  .site-body {
+    padding: var(--spacing--large);
+  }
+
   .site-intro {
     font-size: 1.3em;
   }
 }
 
-
-
-
-@media screen and (min-width: 50rem) {
-  body {
-    font-size: 18px;
-  }
-  
-  pre {
-    font-size: 14px;
+@media screen and (min-width: 37.5em) {
+  .site-body {
+    margin-top: 4.25rem;
   }
 }
 
-@media screen and (min-width: 60rem) {
+@media screen and (min-width: 60em) {
+  body {
+    font-size: 18px;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.25em;
   }
 
   h1 {
     font-size: 3em;
+  }
+
+  p, li {
+    line-height: 1.5;
+  }
+  
+  pre {
+    font-size: 14px;
   }
 }

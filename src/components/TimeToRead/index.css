@@ -1,10 +1,27 @@
-@import '../../layouts/variables.css';
+@import '../../globals/variables.css';
 
 .time-to-read {
-  position: sticky;
-  top: 0;
-  background-color: var(--white);
-  margin: 0;
-  padding: 1em 0;
-  z-index: 2; /* Needed to sit on top of prism styles */
+  float: right;
+  font-size: 0.75em;
+  margin-top: -0.8rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 37.5em) {
+  .time-to-read {
+    float: none;
+    position: sticky;
+    top: 0;
+    z-index: 2; /* Needed to sit on top of prism styles */
+    margin: -2.5rem 0 0 16rem;
+    padding: 2.25em 0 0;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .time-to-read {
+    margin-left: 25rem;
+    margin-top: -2.6rem;
+    padding: 1.75em 0 0;
+  }
 }
