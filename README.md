@@ -21,5 +21,6 @@ I opted to use the Markdown versions of the files, as they offer the most obviou
 Obviously this isn't finished. Here are a few things I'd like to do given more time
 - Pagination on the homepage would be essential if we had lots of articles
 - Asynchronous font loading (as discussed in the 'Why our website is faster than yours' article) would speed things up
+- Better caching rules on the server
 - I'm using React's <code>dangerouslySetInnerHTML</code> which is fine when doing static generation of content. However I'd want to investigate how Gatsby & React handle this on the client, as setting the innerHTML to a bunch of mark-up opens the site up to XSS attacks.
-- Rigorous browser testing is needed. I had a quick glance in Chrome, Firefox and Safari on my Mac, but if this were a real site I'd need to do more testing 
+- Rigorous browser testing is needed. I had a quick glance in Chrome, Firefox and Safari on my Mac, but if this were a real site I'd need to do more testing
