@@ -8,7 +8,7 @@ This was both a really simple and a really complex task. It was simple on the on
 
 ### Assumptions
 
-I have assumed that it is a blog that needs to be built. This seems reasonable as the content to present are long form articles. This means that content is king and needs to be presented front and centre. Fancy interactions would get in the way. I have also assumed that at some point we'll want to add more articles to the site.
+I have assumed that it is a blog that needs to be built. This seems reasonable as the content to present are long form articles. This means that content is king and needs to be presented front and centre. Fancy interactions would get in the way. I have also assumed that at some point we'll want to add more articles to the site. I've also assumed it is for members of the developement community who are likely to have up to date browsers, so backwards compatibility isn't crucial here.
 
 ### Rationale
 
@@ -22,3 +22,4 @@ Obviously this isn't finished. Here are a few things I'd like to do given more t
 - Pagination on the homepage would be essential if we had lots of articles
 - Asynchronous font loading (as discussed in the 'Why our website is faster than yours' article) would speed things up
 - I'm using React's <code>dangerouslySetInnerHTML</code> which is fine when doing static generation of content. However I'd want to investigate how Gatsby & React handle this on the client, as setting the innerHTML to a bunch of mark-up opens the site up to XSS attacks.
+- Rigorous browser testing is needed. I had a quick glance in Chrome, Firefox and Safari on my Mac, but if this were a real site I'd need to do more testing 
